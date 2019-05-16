@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const GET_DATA = 'GET_DATA';
 const LOADING = 'LOADING';
+const ERROR = 'ERROR';
 
 const getData = (city) => (dispatch) => {
 	dispatch({
@@ -20,6 +21,16 @@ const getData = (city) => (dispatch) => {
 				},
 			});
 		})
+		.catch(() => {
+				dispatch({
+					type: ERROR,
+					payload: {
+						error: true,
+						isLoading: false,
+					},
+				})
+			}
+		)
 };
 
 export default getData;

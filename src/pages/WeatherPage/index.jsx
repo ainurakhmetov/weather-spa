@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Dimmer, Loader, Segment, Icon} from "semantic-ui-react";
+import {Container, Dimmer, Loader, Segment, Icon, Header} from "semantic-ui-react";
 import {connect} from "react-redux";
 import Fetch from '../../store/actions/Fetch';
 import WeatherContainer from '../../components/WeatherContainer';
@@ -11,7 +11,7 @@ class HomePage extends React.Component {
 		this.props.Fetch(match.params.id);
 	}
 	render(){
-		const { weather, isLoading } = this.props;
+		const { weather, isLoading, error } = this.props;
 		return(
 			<Container style={{ margin: 20 }}>
 				<Segment raised>
@@ -22,6 +22,13 @@ class HomePage extends React.Component {
 						<Dimmer active inverted>
 							<Loader size='medium'>Loading</Loader>
 						</Dimmer>}
+					{error &&
+					<Header
+						as='h1'
+						textAlign='center'
+						content='something went wrong :('
+						color='blue'
+					/>}
 					{weather.main &&
 						<WeatherContainer
 							temp={weather.main.temp}
@@ -42,6 +49,7 @@ class HomePage extends React.Component {
 const mapStateToProps = state => ({
 	weather: state.store.weather,
 	isLoading: state.store.isLoading,
+	error: state.store.error,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -1,9 +1,11 @@
 const GET_DATA = 'GET_DATA';
 const LOADING = 'LOADING';
+const ERROR = 'ERROR';
 
 const initialState = {
 	weather: [],
 	isLoading: false,
+	error: false,
 };
 
 const fetchReducer = (state = initialState, action) => {
@@ -18,6 +20,12 @@ const fetchReducer = (state = initialState, action) => {
 			return {
 				...state,
 				isLoading: action.payload,
+			};
+		case ERROR:
+			return {
+				...state,
+				error: action.payload.error,
+				isLoading: action.payload.isLoading,
 			};
 		default:
 			return state;
