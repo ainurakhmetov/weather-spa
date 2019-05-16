@@ -28,7 +28,9 @@ class HomePage extends React.Component {
 							city={weather.name}
 							status={weather.weather[0].main}
 							icon={weather.weather[0].icon}
-
+							dt={weather.dt}
+							wind={weather.wind.speed}
+							windDir={weather.wind.deg}
 						/>
 					}
 				</Segment>

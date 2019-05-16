@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Header, Grid, Container, Image, Label, Segment } from "semantic-ui-react";
+import { Card, Header, Grid, Container, Image, Segment } from "semantic-ui-react";
 import { Link } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 import kzn from '../../img/kazan.jpg';
@@ -11,52 +11,53 @@ class HomePage extends React.Component {
 	render(){
 		return(
 			<Container style={{ margin: 20 }}>
-				<Segment raised>
 					<Header
 						as='h1'
 						content='Weather SPA'
 						style={{
-							fontSize: '4em',
+							fontSize: '3em',
 							fontWeight: 'normal',
 							margin: '1em 0',
 							textAlign:'center',
 						}}
 						color='blue'
 					/>
-				</Segment>
 				<Grid columns={3}>
 						<Grid.Column>
 							<Segment raised>
-								<Link to='city/Kazan'>
+								<Link to='/Kazan'>
 									<Card.Content>
-										<Label as='a' color='green' ribbon>
-											Kazan
-										</Label>
-										<Image src={kzn}/>
+										<Image
+											fluid
+											label={{ as: 'a', color: 'green', content: 'Kazan', ribbon: true, size: 'big' }}
+											src={kzn}
+										/>
 									</Card.Content>
 								</Link>
 							</Segment>
 						</Grid.Column>
 						<Grid.Column>
 							<Segment raised>
-								<Link to='city/Moscow'>
+								<Link to='/Moscow'>
 									<Card.Content>
-										<Label as='a' color='red' ribbon>
-											Moscow
-										</Label>
-										<Image src={msk}/>
+										<Image
+											fluid
+											label={{ as: 'a', color: 'red', content: 'Moscow', ribbon: true, size: 'big' }}
+											src={msk}
+										/>
 									</Card.Content>
 								</Link>
 							</Segment>
 						</Grid.Column>
 						<Grid.Column>
 							<Segment raised>
-								<Link to='city/Ufa'>
+								<Link to='/Ufa'>
 									<Card.Content>
-										<Label as='a' color='blue' ribbon>
-											Ufa
-										</Label>
-										<Image src={ufa}/>
+										<Image
+											fluid
+											label={{ as: 'a', color: 'blue', content: 'Ufa', ribbon: true, size: 'big' }}
+											src={ufa}
+										/>
 									</Card.Content>
 								</Link>
 							</Segment>
