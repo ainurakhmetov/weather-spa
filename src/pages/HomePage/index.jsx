@@ -19,8 +19,8 @@ class HomePage extends React.Component {
 							fontWeight: 'normal',
 							margin: '1em 0',
 							textAlign:'center',
+							color: '#60bee5',
 						}}
-						color='blue'
 					/>
 				<Grid columns={3}>
 						<Grid.Column>
@@ -42,7 +42,7 @@ class HomePage extends React.Component {
 									<Card.Content>
 										<Image
 											fluid
-											label={{ as: 'a', color: 'red', content: 'Moscow', ribbon: true, size: 'big' }}
+											label={{ as: 'b', color: 'red', content: 'Moscow', ribbon: true, size: 'big' }}
 											src={msk}
 										/>
 									</Card.Content>
@@ -55,7 +55,7 @@ class HomePage extends React.Component {
 									<Card.Content>
 										<Image
 											fluid
-											label={{ as: 'a', color: 'blue', content: 'Ufa', ribbon: true, size: 'big' }}
+											label={{ as: 'c', color: 'blue', content: 'Ufa', ribbon: true, size: 'big' }}
 											src={ufa}
 										/>
 									</Card.Content>

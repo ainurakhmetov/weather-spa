@@ -38,6 +38,8 @@ class HomePage extends React.Component {
 							dt={weather.dt}
 							wind={weather.wind.speed}
 							windDir={weather.wind.deg}
+							pressure={weather.main.pressure}
+							humidity={weather.main.humidity}
 						/>
 					}
 				</Segment>
