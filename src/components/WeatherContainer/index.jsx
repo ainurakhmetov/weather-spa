@@ -48,7 +48,7 @@ const WeatherContainer = ({temp, city, status, icon, dt, wind, windDir, pressure
 									as='h2'
 									textAlign='center'
 									content={status}
-									style={{color: '#60bee5'}}
+									style={{color: '#60bee5', margin: 0}}
 								/>
 							</Grid.Row>
 						</Grid.Column>

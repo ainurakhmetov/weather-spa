@@ -12,7 +12,7 @@ import Mist from '../../icons/dust.svg';
 import Snow from '../../icons/Snow.svg';
 
 const WeatherIcon = ({icon, style}) => {
-    switch (icon.toLowerCase()) {
+    switch (icon) {
         case '01d':
             return <Image style={style} src={Sunny} />;
         case '02d':
@@ -30,6 +30,24 @@ const WeatherIcon = ({icon, style}) => {
         case '13d':
             return <Image style={style} src={Snow} />;
         case '50d':
+            return <Image style={style} src={Mist} />;
+        case '01n':
+            return <Image style={style} src={Sunny} />;
+        case '02n':
+            return <Image style={style} src={Cloudy} />;
+        case '03n':
+            return <Image style={style} src={Overcast} />;
+        case '04n':
+            return <Image style={style} src={Cloudy2} />;
+        case '09n':
+            return <Image style={style} src={Rain} />;
+        case '10n':
+            return <Image style={style} src={LightRain} />;
+        case '11n':
+            return <Image style={style} src={Thunderstorm} />;
+        case '13n':
+            return <Image style={style} src={Snow} />;
+        case '50n':
             return <Image style={style} src={Mist} />;
         default: return <Image style={style} src={Tornado} />;
     }
