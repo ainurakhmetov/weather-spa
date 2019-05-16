@@ -2,8 +2,8 @@ import React from 'react';
 import { Card, Header, Grid, Container, Image, Label, Segment } from "semantic-ui-react";
 import { Link } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
-import kzn from '../../img/kazan.png';
-import msk from '../../img/moscow.png';
+import kzn from '../../img/kazan.jpg';
+import msk from '../../img/moscow.jpg';
 import ufa from '../../img/ufa.jpg';
 
 
