@@ -20,7 +20,7 @@ class HomePage extends React.Component {
 					</Link>
 					{isLoading &&
 						<Dimmer active inverted>
-							<Loader size='large'>Loading</Loader>
+							<Loader size='medium'>Loading</Loader>
 						</Dimmer>}
 					{weather.main &&
 						<WeatherContainer

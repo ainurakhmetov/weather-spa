@@ -9,7 +9,7 @@ const getData = (city) => (dispatch) => {
 		payload: true,
 	});
 	axios
-		.get(`http://api.openweathermap.org/data/2.5/weather?q=${city},ru&appid=b349755b7def5cce6733be205a2f45fa`)
+		.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},ru&appid=b349755b7def5cce6733be205a2f45fa`)
 		.then((response) => {
 			console.log(response);
 			dispatch({
